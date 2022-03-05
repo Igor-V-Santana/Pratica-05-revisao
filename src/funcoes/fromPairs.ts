@@ -9,5 +9,12 @@ import { KeyAndValue } from "../../types/keyAndValue";
  * @returns 
  */
 export const fromPairs = (args: KeyAndValue[]): Record<string, unknown> => {
-  return null;
+  const fromPairsResult: Record<string, unknown> = {};
+
+  args.map(array => {
+    fromPairsResult[array[0]] = array[1];
+  });
+
+  console.log(fromPairsResult);
+  return fromPairsResult;
 };
