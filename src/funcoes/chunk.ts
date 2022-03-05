@@ -11,6 +11,15 @@
  * @param tamanho numero que representa o tamanho máximo de cada grupo.
  * @returns 
  */
+
 export const chunk = (valores: number[], tamanho: number): number[][] => {
-  return null;
+  const newArray:number[][] = [];
+
+  for(let i = 0; i < valores.length; i+=tamanho){
+    const chunkk = valores.slice(i, i + tamanho);
+    newArray.push(chunkk);
+}
+
+console.log(newArray);
+return newArray;
 };
