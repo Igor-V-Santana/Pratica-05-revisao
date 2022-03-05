@@ -8,5 +8,14 @@
  * @returns somente os itens definidos.
  */
 export const uniq = <T>(args: T[]): T[] => {
-  return null;
+  const newArray = [];
+
+  args.forEach((item) => {
+    if (!newArray.includes(item)){
+      newArray.push(item);
+    }
+  });
+  
+  console.log(newArray);
+  return newArray;
 };
